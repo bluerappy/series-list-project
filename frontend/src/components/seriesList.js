@@ -21,13 +21,15 @@ seriesListMap = () => {
                     <CardBody>
                     <p>ID : {seriesList._id}</p>
                     <p>TITLE : {seriesList.title}</p>
+                    <p>GENRE : {seriesList.genre}</p>
                     <p>YEAR : {seriesList.year}</p>
                     </CardBody>
                 </Col>
             </Row>
-        )
-    })
-}
+            )
+          })
+        }
+
     render(){
         console.log("SeriesList PROPS",this.props.seriesListStore)
             return(
