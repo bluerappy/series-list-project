@@ -3,7 +3,7 @@ import seriesListReducer from './getSeriesList-reducer'
 
 
 const reducers = {
-  seriesListSotre: seriesListReducer,
+  seriesListStore: seriesListReducer,
 }
 console.log("index reducer")
 const rootReducer = combineReducers(reducers);
