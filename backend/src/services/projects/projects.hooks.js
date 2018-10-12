@@ -1,10 +1,3 @@
-const { authenticate } = require('@feathersjs/authentication').hooks;
-const customLowerCase = require('../../hooks/customLowerCase-hook');
-
-
-const {
-  hashPassword, protect
-} = require('@feathersjs/authentication-local').hooks;
 
 
 module.exports = {
@@ -12,7 +5,7 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [customLowerCase('title')],
+    create: [],
     update: [],
     patch: [],
     remove: []

@@ -12,15 +12,12 @@ export const app = feathers();
 }));
 
 export function* postNewSeriesWatcherSaga() {
-    console.log("post watcherSaga")
     yield takeLatest(POSTNEWSERIES_REQUEST , postNewSeriesWorkerSaga);
   }
 
 function* postNewSeriesWorkerSaga(obj) {
-    console.log(" post startWorker")
   try {
     const response = yield call(postNewSeries, obj.payload);
-    console.log("post workerSaga",response)
     const data = response.data;
     yield put({ type: "POSTNEWSERIES_SUCCESS", payload: data });
   } catch (error) {
@@ -28,7 +25,6 @@ function* postNewSeriesWorkerSaga(obj) {
   }
 }
 function postNewSeries(obj) {
-  console.log("HEELLLOO")
     return app.service('series-list').create({
       title : obj.title,
       genre : obj.genre,

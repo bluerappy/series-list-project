@@ -10,7 +10,9 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { rootSaga } from '../src/sagas/rootSaga';
-import reducers from "./reducers"
+import reducers from "./reducers";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore( reducers,
